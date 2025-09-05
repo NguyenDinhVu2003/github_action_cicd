@@ -47,10 +47,5 @@ jobs:
           username: ${{ secrets.DOCKER_USERNAME }}
           password: ${{ secrets.DOCKER_PASSWORD }}
 
-    - name: Trigger Railway Deploy
-      run: |
-          curl -X POST \
-            https://backboard.railway.app/project/${{ secrets.RAILWAY_PROJECT_ID }}/service/${{ secrets.RAILWAY_SERVICE_ID }}/deploy \
-            -H "Authorization: Bearer ${{ secrets.RAILWAY_API_TOKEN }}"
-      working-directory: CICD
+
     
