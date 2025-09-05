@@ -19,4 +19,12 @@ public class LoginController {
             return "Invalid credentials.";
         }
     }
+    @PostMapping("/signup")
+    public String signup(@RequestBody User userRequest) {
+        if (userRepository.findByUsername(userRequest.getUsername()) != null) {
+            return "Username already exists.";
+        }
+        userRepository.save(userRequest);
+        return "Signup successful!";
+    }
 }
