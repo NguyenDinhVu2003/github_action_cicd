@@ -9,7 +9,7 @@ import org.springframework.web.bind.annotation.RestController;
 public class CicdApplication {
 
 	public String welcome() {
-		return "Welcome to CICD";
+		return "Welcome to nguyenvu channel";
 	}
 	public static void main(String[] args) {
 		SpringApplication.run(CicdApplication.class, args);
